@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: lightgray;
+  text-align: justify;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 102.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9rem;
+  z-index: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: black;
+  border-bottom: 0.1rem solid black;
+}
+
+nav.active {
+  background-color: black;
+}
+
+nav.active a {
+  color: white;
+}
+
+nav.active a:hover {
+  color: white;
+  border-bottom: 0.1rem solid white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 8rem);
+}
+
+#home {
+  padding-top: 14rem;
+  gap: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#profilePhoto {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 100%;
+  margin-bottom: 2rem;
+}
+
+.contactIcon {
+  width: 3rem;
+  height: 3rem;
+}
+
+#contactIconsContainer {
+  display: flex;
+  gap: 4rem;
+}
+
+h1.title {
+  margin: 2rem 0;
+}
+
+h2.title {
+  margin: 4rem 0 2rem 0;
+}
+
+#about {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  line-height: 2;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.skillIcon {
+  width: 6rem;
+  height: auto;
+  margin-right: 2rem;
+  transition: all 0.5s;
+}
+
+.skillIcon:hover {
+  transform: scale(1.2);
+}
+
+#projects {
+  padding-top: 6rem;
+}
+
+.projectContainer {
+  margin-bottom: 6rem;
+  display: flex;
+  gap: 4rem;
+  border: 0.1rem solid gray;
+  border-radius: 2rem;
+}
+
+.projectScreen {
+  width: 20rem;
+  height: 20rem;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.projectContainer a.image {
+  text-decoration: none;
+  color: black;
+  line-height: 0;
+}
+
+.projectContainerInfo {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectContainer a {
+  text-decoration: none;
+  color: black;
+}
+
+.projectContainer a:hover {
+  opacity: 0.6;
+}
+
+div .projectContainer p {
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.technology {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.projectLink {
+  position: sticky;
+  margin-bottom: 2rem;
+  text-align: end;
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.projectLink:hover {
+  opacity: 0.6;
+}
+
+footer {
+  width: 100%;
+  padding-block: 2rem;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#footerArea {
+  width: 95%;
+  max-width: 102.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "A B C";
+}
+
+footer #footerCenter {
+  justify-self: center;
+  height: 4rem;
+}
+
+footer #footerCenter p {
+  padding-top: 0.2rem;
+}
+
+footer #contactIconsContainerFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer .contactIconFooter {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer #arrow {
+  background-color: rgb(34, 30, 30);
+  color: white;
+  font-size: 2.4rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  justify-self: end;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer #arrow:hover {
+  background-color: rgb(70, 65, 65);
+}
+
+@media (max-width: 1010px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .contactIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .skillIcon {
+    width: 5rem;
+    margin-right: 2rem;
+  }
+
+  .technology {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 6rem;
+  }
+
+  .wrapper {
+    width: 95%;
+    max-width: 30.4rem;
+  }
+
+  #home {
+    padding-top: 10rem;
+    gap: 4rem;
+  }
+
+  #profilePhoto {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 0rem;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  /* #skillsIconsContainer {
+    width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  .skillIcon {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  .projectContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projectScreen {
+    width: 30.2rem;
+    height: 30.2rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  .projectContainerInfo {
+    padding: 0 1rem;
+  }
+
+  .projectLink {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
